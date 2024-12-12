@@ -4,16 +4,29 @@
  */
 package com.mycompany.examendesarrollointerfaces;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JSpinner;
+
 /**
  *
  * @author walth
  */
 public class Prueba1 extends javax.swing.JFrame {
-
+    String nombreFocus;
+    WritingToExcel wte;
+    
     /**
      * Creates new form Prueba1
      */
     public Prueba1() {
+        this.nombreFocus = "";
+        this.wte = new WritingToExcel();
         initComponents();
     }
 
@@ -25,33 +38,682 @@ public class Prueba1 extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
 
-        jLabel1 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jTabbedPane2 = new javax.swing.JTabbedPane();
+        clase1 = new javax.swing.JPanel();
+        panelAlumnosClase1 = new javax.swing.JPanel();
+        radioAlumno1_1 = new javax.swing.JRadioButton();
+        radioAlumno1_2 = new javax.swing.JRadioButton();
+        radioAlumno1_3 = new javax.swing.JRadioButton();
+        radioAlumno1_4 = new javax.swing.JRadioButton();
+        radioAlumno1_5 = new javax.swing.JRadioButton();
+        radioAlumno1_6 = new javax.swing.JRadioButton();
+        radioAlumno1_7 = new javax.swing.JRadioButton();
+        radioAlumno1_8 = new javax.swing.JRadioButton();
+        panelMateriasClase1 = new javax.swing.JPanel();
+        txtMates1 = new javax.swing.JLabel();
+        txtQuimica1 = new javax.swing.JLabel();
+        txtFisica1 = new javax.swing.JLabel();
+        txtBiologia1 = new javax.swing.JLabel();
+        spinnerMates1 = new javax.swing.JSpinner();
+        spinnerQuimica1 = new javax.swing.JSpinner();
+        spinnerFisica1 = new javax.swing.JSpinner();
+        spinnerBiologia1 = new javax.swing.JSpinner();
+        clase2 = new javax.swing.JPanel();
+        panelAlumnosClase2 = new javax.swing.JPanel();
+        radioAlumno2_8 = new javax.swing.JRadioButton();
+        radioAlumno2_1 = new javax.swing.JRadioButton();
+        radioAlumno2_2 = new javax.swing.JRadioButton();
+        radioAlumno2_3 = new javax.swing.JRadioButton();
+        radioAlumno2_4 = new javax.swing.JRadioButton();
+        radioAlumno2_5 = new javax.swing.JRadioButton();
+        radioAlumno2_6 = new javax.swing.JRadioButton();
+        radioAlumno2_7 = new javax.swing.JRadioButton();
+        panelMateriasClase2 = new javax.swing.JPanel();
+        txtMates2 = new javax.swing.JLabel();
+        txtQuimica2 = new javax.swing.JLabel();
+        txtFisica2 = new javax.swing.JLabel();
+        txtBiologia2 = new javax.swing.JLabel();
+        spinnerMates2 = new javax.swing.JSpinner();
+        spinnerQuimica2 = new javax.swing.JSpinner();
+        spinnerFisica2 = new javax.swing.JSpinner();
+        spinnerBiologia2 = new javax.swing.JSpinner();
+        buttonExcel = new javax.swing.JButton();
+        buttonPdf = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        menuOpciones = new javax.swing.JMenu();
+        ponerA1Materias = new javax.swing.JMenuItem();
+        TamañoMin = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/junta-educaclm - copia - copia.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        panelAlumnosClase1.setLayout(new java.awt.GridBagLayout());
+
+        buttonGroup2.add(radioAlumno1_1);
+        radioAlumno1_1.setText("Alumno1_1");
+        radioAlumno1_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_1, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_2);
+        radioAlumno1_2.setText("Alumno1_2");
+        radioAlumno1_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_2ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_2, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_3);
+        radioAlumno1_3.setText("Alumno1_3");
+        radioAlumno1_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_3ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_3, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_4);
+        radioAlumno1_4.setText("Alumno1_4");
+        radioAlumno1_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_4ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_4, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_5);
+        radioAlumno1_5.setText("Alumno1_5");
+        radioAlumno1_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_5ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_5, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_6);
+        radioAlumno1_6.setText("Alumno1_6");
+        radioAlumno1_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_6ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_6, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_7);
+        radioAlumno1_7.setText("Alumno1_7");
+        radioAlumno1_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_7ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_7, gridBagConstraints);
+
+        buttonGroup2.add(radioAlumno1_8);
+        radioAlumno1_8.setText("Alumno1_8");
+        radioAlumno1_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno1_8ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase1.add(radioAlumno1_8, gridBagConstraints);
+
+        panelMateriasClase1.setLayout(new java.awt.GridBagLayout());
+
+        txtMates1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtMates1.setText("Matematicas");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase1.add(txtMates1, gridBagConstraints);
+
+        txtQuimica1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtQuimica1.setText("Quimica");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase1.add(txtQuimica1, gridBagConstraints);
+
+        txtFisica1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtFisica1.setText("Fisica");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase1.add(txtFisica1, gridBagConstraints);
+
+        txtBiologia1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBiologia1.setText("Biologia");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase1.add(txtBiologia1, gridBagConstraints);
+
+        spinnerMates1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase1.add(spinnerMates1, gridBagConstraints);
+
+        spinnerQuimica1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase1.add(spinnerQuimica1, gridBagConstraints);
+
+        spinnerFisica1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase1.add(spinnerFisica1, gridBagConstraints);
+
+        spinnerBiologia1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase1.add(spinnerBiologia1, gridBagConstraints);
+
+        javax.swing.GroupLayout clase1Layout = new javax.swing.GroupLayout(clase1);
+        clase1.setLayout(clase1Layout);
+        clase1Layout.setHorizontalGroup(
+            clase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clase1Layout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addGroup(clase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelAlumnosClase1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelMateriasClase1, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(112, Short.MAX_VALUE))
+        );
+        clase1Layout.setVerticalGroup(
+            clase1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clase1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(panelAlumnosClase1, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(panelMateriasClase1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Clase1", clase1);
+
+        panelAlumnosClase2.setLayout(new java.awt.GridBagLayout());
+
+        buttonGroup1.add(radioAlumno2_8);
+        radioAlumno2_8.setText("Alumno2_8");
+        radioAlumno2_8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_8ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_8, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_1);
+        radioAlumno2_1.setText("Alumno2_1");
+        radioAlumno2_1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                radioAlumno2_1FocusGained(evt);
+            }
+        });
+        radioAlumno2_1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_1ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_1, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_2);
+        radioAlumno2_2.setText("Alumno2_2");
+        radioAlumno2_2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_2ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_2, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_3);
+        radioAlumno2_3.setText("Alumno2_3");
+        radioAlumno2_3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_3ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_3, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_4);
+        radioAlumno2_4.setText("Alumno2_4");
+        radioAlumno2_4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_4ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_4, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_5);
+        radioAlumno2_5.setText("Alumno2_5");
+        radioAlumno2_5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_5ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_5, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_6);
+        radioAlumno2_6.setText("Alumno2_6");
+        radioAlumno2_6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_6ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_6, gridBagConstraints);
+
+        buttonGroup1.add(radioAlumno2_7);
+        radioAlumno2_7.setText("Alumno2_7");
+        radioAlumno2_7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radioAlumno2_7ActionPerformed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(5, 9, 5, 9);
+        panelAlumnosClase2.add(radioAlumno2_7, gridBagConstraints);
+
+        panelMateriasClase2.setLayout(new java.awt.GridBagLayout());
+
+        txtMates2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtMates2.setText("Matematicas");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase2.add(txtMates2, gridBagConstraints);
+
+        txtQuimica2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtQuimica2.setText("Quimica");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase2.add(txtQuimica2, gridBagConstraints);
+
+        txtFisica2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtFisica2.setText("Fisica");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase2.add(txtFisica2, gridBagConstraints);
+
+        txtBiologia2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBiologia2.setText("Biologia");
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.insets = new java.awt.Insets(11, 18, 11, 18);
+        panelMateriasClase2.add(txtBiologia2, gridBagConstraints);
+
+        spinnerMates2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase2.add(spinnerMates2, gridBagConstraints);
+
+        spinnerQuimica2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase2.add(spinnerQuimica2, gridBagConstraints);
+
+        spinnerFisica2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase2.add(spinnerFisica2, gridBagConstraints);
+
+        spinnerBiologia2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        gridBagConstraints.ipadx = 10;
+        panelMateriasClase2.add(spinnerBiologia2, gridBagConstraints);
+
+        buttonExcel.setText("Exportar Excel");
+        buttonExcel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonExcelActionPerformed(evt);
+            }
+        });
+
+        buttonPdf.setText("Exportar PDF");
+
+        javax.swing.GroupLayout clase2Layout = new javax.swing.GroupLayout(clase2);
+        clase2.setLayout(clase2Layout);
+        clase2Layout.setHorizontalGroup(
+            clase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clase2Layout.createSequentialGroup()
+                .addGap(87, 87, 87)
+                .addGroup(clase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelAlumnosClase2, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(panelMateriasClase2, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(112, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, clase2Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(buttonPdf)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(buttonExcel)
+                .addGap(93, 93, 93))
+        );
+        clase2Layout.setVerticalGroup(
+            clase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(clase2Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(panelAlumnosClase2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(panelMateriasClase2, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addGroup(clase2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonExcel)
+                    .addComponent(buttonPdf))
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+
+        jTabbedPane2.addTab("Clase2", clase2);
+
+        menuOpciones.setText("File");
+
+        ponerA1Materias.setText("Materias a 1");
+        ponerA1Materias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ponerA1MateriasActionPerformed(evt);
+            }
+        });
+        menuOpciones.add(ponerA1Materias);
+
+        TamañoMin.setText("Tamaño minimo");
+        menuOpciones.add(TamañoMin);
+
+        jMenuBar1.add(menuOpciones);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(87, Short.MAX_VALUE))
+            .addComponent(jTabbedPane2, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void radioAlumno2_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_3ActionPerformed
+        nombreFocus = "Alumno2_3";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_3ActionPerformed
+
+    private void radioAlumno1_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_4ActionPerformed
+        nombreFocus = "Alumno1_4";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_4ActionPerformed
+
+    private void ponerA1MateriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ponerA1MateriasActionPerformed
+        JSpinner[] spinners = {spinnerBiologia1,
+                                spinnerBiologia2,
+                                spinnerFisica1,
+                                spinnerFisica2,
+                                spinnerMates1,
+                                spinnerMates2,
+                                spinnerQuimica1,
+                                spinnerQuimica2
+        };
+        
+        for (JSpinner spinner : spinners){
+            spinner.setValue((int) 1);
+        }
+        
+        JOptionPane.showMessageDialog(this, "Materias puestas a uno.");
+        
+    }//GEN-LAST:event_ponerA1MateriasActionPerformed
+    
+    private HashMap<String,String> obtenerDatos(){
+        HashMap<String,String> datos = new HashMap<>();
+        
+        
+        String[] listaNombreClase1 = {"Alumno1_1","Alumno1_2","Alumno1_3","Alumno1_4","Alumno1_5","Alumno1_6","Alumno1_7","Alumno1_8"};
+        
+        String[] listaNombreClase2 = {"Alumno2_1","Alumno2_2","Alumno2_3","Alumno2_4","Alumno2_5","Alumno2_6","Alumno2_7","Alumno2_8"};
+        
+        JSpinner[] spinnersClase1 = { spinnerBiologia1,spinnerFisica1,spinnerMates1,spinnerQuimica1};
+        
+        JSpinner[] spinnersClase2 = {spinnerBiologia2,spinnerFisica2,spinnerMates2,spinnerQuimica2};
+        
+        ArrayList<String> datosAlumnoFocus = new  ArrayList<>();
+        
+        
+        boolean existenDatos = false;
+        
+        
+        
+        for (String nombresClase1 : listaNombreClase1){
+            if (nombresClase1.equals(nombreFocus) ){
+                datosAlumnoFocus.add(nombreFocus);
+                for (int i = 0; i < spinnersClase1.length;i++){
+                    Integer dato = (Integer) spinnersClase1[i].getValue();
+                    datosAlumnoFocus.add(dato.toString());
+                }
+                existenDatos = true;
+                break;
+            }
+        }
+
+        if (existenDatos){
+            Double promedio = 0.0;
+            for (JSpinner spinner : spinnersClase1 ){
+                promedio += (int) spinner.getValue();
+            }
+            promedio = promedio / spinnersClase1.length;
+
+            datosAlumnoFocus.add(promedio.toString());
+        }
+
+
+        if (!existenDatos){
+            for (String nombresClase2 : listaNombreClase2){
+            if (nombresClase2.equals(nombreFocus) ){
+                datosAlumnoFocus.add(nombreFocus);
+                for (int i = 0; i < spinnersClase2.length;i++){
+                    Integer dato = (Integer) spinnersClase2[i].getValue();
+                    datosAlumnoFocus.add(dato.toString());
+                }
+                break;
+                }
+            }
+
+            Double promedio = 0.0;
+            for (JSpinner spinner : spinnersClase2 ){
+                promedio += (int) spinner.getValue();
+            }
+            promedio = promedio / spinnersClase2.length;
+
+            datosAlumnoFocus.add(promedio.toString());
+        }
+        
+
+        
+        
+        
+        System.out.println(wte.getCabecera());
+        System.out.println(datosAlumnoFocus);
+        for (int i = 0; i < wte.getCabecera().length;i++){
+            datos.put(wte.getCabecera()[i], datosAlumnoFocus.get(i));
+        }
+        
+        
+        return datos;
+    } 
+    
+    private void buttonExcelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExcelActionPerformed
+        HashMap<String,String> datos = obtenerDatos();
+        
+        try {
+            wte.escribirDatosInforme(datos);
+        } catch (IOException ex) {
+            Logger.getLogger(Prueba1.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_buttonExcelActionPerformed
+
+    private void radioAlumno2_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_1ActionPerformed
+        nombreFocus = "Alumno2_1";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_1ActionPerformed
+
+    private void radioAlumno2_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_2ActionPerformed
+        nombreFocus = "Alumno2_2";
+        System.out.println(nombreFocus);
+        
+    }//GEN-LAST:event_radioAlumno2_2ActionPerformed
+
+    private void radioAlumno2_1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_radioAlumno2_1FocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radioAlumno2_1FocusGained
+
+    private void radioAlumno2_4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_4ActionPerformed
+        nombreFocus = "Alumno2_4";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_4ActionPerformed
+
+    private void radioAlumno2_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_5ActionPerformed
+        nombreFocus = "Alumno2_5";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_5ActionPerformed
+
+    private void radioAlumno2_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_6ActionPerformed
+        nombreFocus = "Alumno2_6";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_6ActionPerformed
+
+    private void radioAlumno2_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_7ActionPerformed
+        nombreFocus = "Alumno2_7";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_7ActionPerformed
+
+    private void radioAlumno2_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno2_8ActionPerformed
+        nombreFocus = "Alumno2_8";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno2_8ActionPerformed
+
+    private void radioAlumno1_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_1ActionPerformed
+        nombreFocus = "Alumno1_1";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_1ActionPerformed
+
+    private void radioAlumno1_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_2ActionPerformed
+        nombreFocus = "Alumno1_2";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_2ActionPerformed
+
+    private void radioAlumno1_3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_3ActionPerformed
+        nombreFocus = "Alumno1_3";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_3ActionPerformed
+
+    private void radioAlumno1_5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_5ActionPerformed
+        nombreFocus = "Alumno1_5";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_5ActionPerformed
+
+    private void radioAlumno1_6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_6ActionPerformed
+        nombreFocus = "Alumno1_6";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_6ActionPerformed
+
+    private void radioAlumno1_7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_7ActionPerformed
+        nombreFocus = "Alumno1_7";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_7ActionPerformed
+
+    private void radioAlumno1_8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioAlumno1_8ActionPerformed
+        nombreFocus = "Alumno1_8";
+        System.out.println(nombreFocus);
+    }//GEN-LAST:event_radioAlumno1_8ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,6 +751,52 @@ public class Prueba1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenuItem TamañoMin;
+    private javax.swing.JButton buttonExcel;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton buttonPdf;
+    private javax.swing.JPanel clase1;
+    private javax.swing.JPanel clase2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JTabbedPane jTabbedPane2;
+    private javax.swing.JMenu menuOpciones;
+    private javax.swing.JPanel panelAlumnosClase1;
+    private javax.swing.JPanel panelAlumnosClase2;
+    private javax.swing.JPanel panelMateriasClase1;
+    private javax.swing.JPanel panelMateriasClase2;
+    private javax.swing.JMenuItem ponerA1Materias;
+    private javax.swing.JRadioButton radioAlumno1_1;
+    private javax.swing.JRadioButton radioAlumno1_2;
+    private javax.swing.JRadioButton radioAlumno1_3;
+    private javax.swing.JRadioButton radioAlumno1_4;
+    private javax.swing.JRadioButton radioAlumno1_5;
+    private javax.swing.JRadioButton radioAlumno1_6;
+    private javax.swing.JRadioButton radioAlumno1_7;
+    private javax.swing.JRadioButton radioAlumno1_8;
+    private javax.swing.JRadioButton radioAlumno2_1;
+    private javax.swing.JRadioButton radioAlumno2_2;
+    private javax.swing.JRadioButton radioAlumno2_3;
+    private javax.swing.JRadioButton radioAlumno2_4;
+    private javax.swing.JRadioButton radioAlumno2_5;
+    private javax.swing.JRadioButton radioAlumno2_6;
+    private javax.swing.JRadioButton radioAlumno2_7;
+    private javax.swing.JRadioButton radioAlumno2_8;
+    private javax.swing.JSpinner spinnerBiologia1;
+    private javax.swing.JSpinner spinnerBiologia2;
+    private javax.swing.JSpinner spinnerFisica1;
+    private javax.swing.JSpinner spinnerFisica2;
+    private javax.swing.JSpinner spinnerMates1;
+    private javax.swing.JSpinner spinnerMates2;
+    private javax.swing.JSpinner spinnerQuimica1;
+    private javax.swing.JSpinner spinnerQuimica2;
+    private javax.swing.JLabel txtBiologia1;
+    private javax.swing.JLabel txtBiologia2;
+    private javax.swing.JLabel txtFisica1;
+    private javax.swing.JLabel txtFisica2;
+    private javax.swing.JLabel txtMates1;
+    private javax.swing.JLabel txtMates2;
+    private javax.swing.JLabel txtQuimica1;
+    private javax.swing.JLabel txtQuimica2;
     // End of variables declaration//GEN-END:variables
 }
